@@ -8,9 +8,9 @@ export const WebWrapper = styled.div`
 	box-sizing: border-box;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 70px 100% 20px;
+	grid-template-rows: auto 100% 20px;
 	background-color: transparent;
-	padding-bottom: 20px;
+	padding: 20px;
 `;
 
 /*
@@ -20,8 +20,9 @@ export const WebWrapper = styled.div`
 export const Navbar = styled.nav`
 	box-sizing: border-box;
 	border-radius: 20px;
+	margin-top: 10px;
 	padding: 20px 30px;
-	width: 70%;
+	width: 90%;
 	margin: auto;
 	background-color: rgba(255, 255, 255, 0.4);
 	backdrop-filter: blur(8px) saturate(100%) contrast(100%) brightness(100%);
@@ -56,6 +57,10 @@ export const NavItem = styled.li`
 	&:nth-child(3) {
 		color: ${({ theme }) => theme.themes.Aqours};
 	}
+
+	@media (max-width: 600px) {
+		display: block;
+	}
 `;
 
 /*
@@ -65,7 +70,7 @@ export const NavItem = styled.li`
 export const PageStyle = styled.main`
 	box-sizing: border-box;
 	border-radius: 20px;
-	width: 70%;
+	width: 90%;
 	margin: auto;
 	background-color: rgba(255, 255, 255, 0.4);
 	backdrop-filter: blur(2px) saturate(100%) contrast(100%) brightness(100%);
@@ -121,6 +126,45 @@ export const AqoursPageContent = styled(MusePageContent)`
 
 	p {
 		color: ${({ theme }) => theme.themes.Aqours};
+	}
+`;
+
+export const HomePageContent = styled(MusePageContent)`
+	h1 {
+		color: ${({ theme }) => theme.themes.LoveLive};
+		border-bottom: 2px solid ${({ theme }) => theme.themes.LoveLive};
+	}
+
+	h2 {
+		color: ${({ theme }) => theme.themes.LoveLive};
+	}
+
+	p {
+		color: ${({ theme }) => theme.themes.LoveLive};
+	}
+
+	table {
+		margin: 20px;
+		border: 2px solid ${({ theme }) => theme.themes.LoveLive};
+		color: ${({ theme }) => theme.themes.LoveLive};
+		font-weight: 600;
+		border-collapse: collapse;
+
+		tr {
+			padding: 5px 0px;
+			margin: 5px 0px;
+
+			th {
+				background-color: ${({ theme }) => theme.themes.LoveLive};
+				color: white;
+				font-size: 20px;
+				padding: 7px;
+			}
+
+			td {
+				padding: 5px 10px;
+			}
+		}
 	}
 `;
 

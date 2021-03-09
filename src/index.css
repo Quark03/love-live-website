@@ -10,10 +10,11 @@ body,
 	width: 100%;
 	font-family: "Maven Pro";
 	box-sizing: border-box;
-	padding: 40px;
 	background: url("./assets/Background.jpg") no-repeat center center;
 	background-size: cover;
 	background-attachment: fixed;
+	user-select: none;
+	-webkit-user-drag: none;
 }
 
 ::-webkit-scrollbar {
