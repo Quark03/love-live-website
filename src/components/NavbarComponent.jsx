@@ -14,7 +14,6 @@ function NavbarComponent() {
 				<NavItem onClick={() => travel("/")}>Love Live</NavItem>
 				<NavItem onClick={() => travel("/muse")}>Muse</NavItem>
 				<NavItem onClick={() => travel("/aqours")}>Aqours</NavItem>
-				<NavItem onClick={() => travel("/aqours")}>Test</NavItem>
 			</NavbarSection>
 		</Navbar>
 	);
